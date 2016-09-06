@@ -84,16 +84,64 @@
 
 
 
-<meta name="description" content="��������������ʲô��">
+<meta name="description" content="面向对象之基础什么是面向对象
+面向对象是使用对象进行开发(指挥者)
+面向对象是面向过程的封装
+面向过程是按照过程是按照过程一步一步执行(执行者)
+面向对象是将执行者变成指挥者
+
+面向对象的特性抽象性
+抽取核心数据用来描述
+在特定环境下才知道这个对象的真正意义
+
+封装性
+将数据(属性)和功能(方法)进行封装
+成员是简单数据类型就是属性,成员是函数 就是方法
+方法就是过程的封装
+
+继承性
+将别人的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://yoursite.com/2016/09/06/Hello/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/09/06/面向对象之基础/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="��������������ʲô��">
-<meta property="og:updated_time" content="2016-09-06T03:16:47.976Z">
+<meta property="og:description" content="面向对象之基础什么是面向对象
+面向对象是使用对象进行开发(指挥者)
+面向对象是面向过程的封装
+面向过程是按照过程是按照过程一步一步执行(执行者)
+面向对象是将执行者变成指挥者
+
+面向对象的特性抽象性
+抽取核心数据用来描述
+在特定环境下才知道这个对象的真正意义
+
+封装性
+将数据(属性)和功能(方法)进行封装
+成员是简单数据类型就是属性,成员是函数 就是方法
+方法就是过程的封装
+
+继承性
+将别人的方法">
+<meta property="og:updated_time" content="2016-09-01T13:00:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
-<meta name="twitter:description" content="��������������ʲô��">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="面向对象之基础什么是面向对象
+面向对象是使用对象进行开发(指挥者)
+面向对象是面向过程的封装
+面向过程是按照过程是按照过程一步一步执行(执行者)
+面向对象是将执行者变成指挥者
+
+面向对象的特性抽象性
+抽取核心数据用来描述
+在特定环境下才知道这个对象的真正意义
+
+封装性
+将数据(属性)和功能(方法)进行封装
+成员是简单数据类型就是属性,成员是函数 就是方法
+方法就是过程的封装
+
+继承性
+将别人的方法">
 
 
 
@@ -114,9 +162,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/06/Hello/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/06/面向对象之基础/"/>
 
-  <title> Hello | Hexo </title>
+  <title>  | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -236,7 +284,7 @@
             
             
               
-                Hello
+                
               
             
           </h1>
@@ -248,7 +296,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-06T11:07:20+08:00" content="2016-09-06">
+            <time itemprop="dateCreated" datetime="2016-09-06T11:40:39+08:00" content="2016-09-06">
               2016-09-06
             </time>
           </span>
@@ -276,9 +324,35 @@
       
 
       
-        <blockquote>
-<p>��������������ʲô��</p>
-</blockquote>
+        <h1 id="面向对象之基础"><a href="#面向对象之基础" class="headerlink" title="面向对象之基础"></a>面向对象之基础</h1><h2 id="什么是面向对象"><a href="#什么是面向对象" class="headerlink" title="什么是面向对象"></a>什么是面向对象</h2><ul>
+<li>面向对象是使用对象进行开发(指挥者)</li>
+<li>面向对象是面向过程的封装</li>
+<li>面向过程是按照过程是按照过程一步一步执行(执行者)</li>
+<li>面向对象是将执行者变成指挥者</li>
+</ul>
+<h2 id="面向对象的特性"><a href="#面向对象的特性" class="headerlink" title="面向对象的特性"></a>面向对象的特性</h2><h4 id="抽象性"><a href="#抽象性" class="headerlink" title="抽象性"></a>抽象性</h4><ol>
+<li>抽取核心数据用来描述</li>
+<li>在特定环境下才知道这个对象的真正意义</li>
+</ol>
+<h4 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h4><ul>
+<li>将数据(属性)和功能(方法)进行封装</li>
+<li>成员是简单数据类型就是属性,成员是函数 就是方法</li>
+<li>方法就是过程的封装</li>
+</ul>
+<h4 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h4><ul>
+<li>将别人的方法和属性拿来自己使用,并且成为自己的成员</li>
+<li>传统继承基于模板</li>
+<li><p>js继承基于对象</p>
+<pre><code>mix混入方法实现继承(JQ中是extend方法)
+function mix(obj){
+    var newObj = {};
+    for(var k in obj){
+        newObj[k] = obj[k];
+    }
+    return newObj;
+}
+</code></pre></li>
+</ul>
 
       
     </div>
@@ -304,17 +378,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/09/06/Hello/" rel="next" title="Hello">
+                <i class="fa fa-chevron-left"></i> Hello
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/06/面向对象之基础/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -414,7 +484,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象之基础"><span class="nav-number">1.</span> <span class="nav-text">面向对象之基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是面向对象"><span class="nav-number">1.1.</span> <span class="nav-text">什么是面向对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象的特性"><span class="nav-number">1.2.</span> <span class="nav-text">面向对象的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象性"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">抽象性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装性"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">封装性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承性"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">继承性</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
