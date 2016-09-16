@@ -105,12 +105,126 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
      -webkit-background-size: cover;
      background-size: cover;
  }
+#s1 h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 40px 0 10px;
+    letter-spacing: 10px;
+    opacity: 0;
+}
+#s1.current h1{
+    animation: fadeInDown 1s  ease both;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+#s1.current p{
+    animation: fadeInUp 1s ease both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+#s1 p{
+    font-size: 24px;
+    font-weight: 400;
+    color: #fefefe;
+    opacity: 0;
+}
+
+
 #s2{
     height: auto;
     background: url("../image/home2.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
 }
+#s2 h2,p{
+    color: #ffffff;
+}
+#s2 .section-heading{
+    opacity: 0;
+}
+#s2 .divider-header{
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: #ffffff;
+}
+#s2.current .section-heading{
+    opacity: 1;
+    animation: bounceInDown 1s ease both;
+}
+@keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+#s2 .ptext1,.ptext2{
+    opacity: 0;
+    line-height: 30px;
+}
+#s2.current .ptext1{
+    line-height: 30px;
+    /*transition: all 1s;*/
+    animation: rotateIn 1s 1s ease both;
+}
+#s2.current .ptext2{
+    line-height: 30px;
+    animation: fadeInUp 1s 2s ease both;
+}
+
+
 #s3{
     height: auto;
     background: url("../image/home3.jpg") no-repeat center;
