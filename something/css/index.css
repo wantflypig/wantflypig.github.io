@@ -99,13 +99,13 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
     color: #ccc;
 }
 
-#s1{
+.s1{
      height: auto;
      background: url("../image/home.jpg") no-repeat center;
      -webkit-background-size: cover;
      background-size: cover;
  }
-#s1 h1{
+.s1 h1{
     font-size: 50px;
     font-weight: 700;
     color: #ffffff;
@@ -113,7 +113,7 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
     letter-spacing: 10px;
     opacity: 0;
 }
-#s1.current h1{
+.s1.current h1{
     animation: fadeInDown 1s  ease both;
 }
 @keyframes fadeInDown {
@@ -129,7 +129,7 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
         transform: none;
     }
 }
-#s1.current p{
+.s1.current p{
     animation: fadeInUp 1s ease both;
 }
 @keyframes fadeInUp {
@@ -145,7 +145,7 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
         transform: none;
     }
 }
-#s1 p{
+.s1 p{
     font-size: 24px;
     font-weight: 400;
     color: #fefefe;
@@ -153,19 +153,19 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
 }
 
 
-#s2{
+.s2{
     height: auto;
     background: url("../image/home2.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
 }
-#s2 h2,p{
+.s2 h2,p{
     color: #ffffff;
 }
-#s2 .section-heading{
+.s2 .section-heading{
     opacity: 0;
 }
-#s2 .divider-header{
+.s2 .divider-header{
     display: block;
     width: 40px;
     height: 2px;
@@ -173,7 +173,7 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
     margin-bottom: 10px;
     background: #ffffff;
 }
-#s2.current .section-heading{
+.s2.current .section-heading{
     opacity: 1;
     animation: bounceInDown 1s ease both;
 }
@@ -243,34 +243,48 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
         transform: none;
     }
 }
-#s2 .ptext1,.ptext2{
+.s2 .ptext1,.ptext2{
     opacity: 0;
     line-height: 30px;
+    margin-top: 20px;
 }
-#s2.current .ptext1{
+.s2 .echart{
+    opacity: 0;
+    margin-top: -100px;
+    width: 100%;
+    height: 500px;
+}
+.s2.current .ptext1{
     line-height: 30px;
     /*transition: all 1s;*/
     animation: rotateIn 1s 1s ease both;
 }
-#s2.current .ptext2{
+.s2.current .ptext2{
     line-height: 30px;
     animation: fadeInUp 1s 2s ease both;
 }
+.s2.current .echart{
+    margin: -100px auto 0;
+    width: 100%;
+    height: 500px;
+    animation: flipInY 4s 1s ease both;
+    opacity: 1;
+}
 
 
-#s3{
+.s3{
     height: auto;
     background: url("../image/home3.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
 }
-#s4{
+.s4{
     height: auto;
     background: url("../image/home4.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
 }
-#s5{
+.s5{
     height: auto;
     background: url("../image/home5.jpg") no-repeat center;
     -webkit-background-size: cover;

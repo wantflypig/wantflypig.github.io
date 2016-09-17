@@ -13,9 +13,9 @@
     <script src="lib/respond/respond.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body  id="myScrollspy">
 <!--导航begin-->
@@ -32,11 +32,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#s1">首页</a></li>
-                <li><a href="#s2">个人介绍</a></li>
-                <li><a href="#s3">项目经验</a></li>
-                <li><a href="#s4">CSS3特效</a></li>
-                <li><a href="#s5">call me</a></li>
+                <li data-menuanchor="s1"><a href="#s1">首页</a></li>
+                <li data-menuanchor="s2"><a href="#s2">个人介绍</a></li>
+                <li data-menuanchor="s3"><a href="#s3">项目经验</a></li>
+                <li data-menuanchor="s4"><a href="#s4">CSS3特效</a></li>
+                <li data-menuanchor="s5"><a href="#s5">call me</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -44,7 +44,7 @@
 <!--导航end-->
 
 <div id="fullpage">
-        <sction class="section" id="s1">
+        <sction class="section s1" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-right navicon">
@@ -64,7 +64,7 @@
         </sction>
 
 
-    <sction class="section" id="s2">
+    <sction class="section s2" >
         <div class="container marginbot-50">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -80,23 +80,29 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 animatedParent">
-                    <div class="text-center ptext">
+                <div class="col-lg-6 hidden-xs">
+                    <div class=" ptext">
                         <p class="ptext1">
-                            熟练使用html/css,能精准还原设计图效果，熟悉 W3C标准，对标签语义化、代码重用性、代码模块化有深入了解，并拥有丰富的页面布局经验。
-                            能熟练使用原生JavaScript，熟练各种BOM,DOM操作。对原型，闭包，jQuery的封装原理亦有了解。
-                            熟练使用jQuery，zepto实现多终端页面制作，熟练使用bootstrap进行响应式页面的开发。
-                            熟练使用fullPage.js，video.js等常用的js插件。
+                            熟练掌握Html/css，能熟练编写符合W3C标准的web页面，并兼容目前的主流浏览器。
+                            熟练掌握javascript，jQuery，开发完成各种页面中需要的特效及功能。
+                            熟悉HTML5 和CSS3的使用，熟悉常用动画，对HTML语义化有深入理解。
+                            熟悉基于AJAX的技术应用开发，熟练使用ajax+json进行前后端数据交互，同时也了解jsonp原理。
+                            熟练掌握bootstrap并能使用其开发响应式网站，了解angular.js。
+                            熟练掌握git，了解git的常用工作流程，会使用gulp。
+
+                            英语CET-4通过
 
                         </p>
                         <p class="ptext2">
-                            会使用自动化构建工具gulp，以及git
-                            了解http协议，能使用 Ajax 、json 完成前后端数据交互，并完成页面渲染工作。
-                            了解node.js，能阅读PHP代码。
-                            了解网站优化方案，有提升用户体验的意识。
+                            自我介绍	责任心强，思维灵活，交流表达能力清晰，擅于融入团队合作。
+                            对新兴事物兴趣浓，喜欢关注互联网IT的开源社区，紧跟时下潮流。
+                            喜爱运动，爱好比较广泛，心理素质强，对不同环境的适应力很强。
                         </p>
 
                     </div>
+                </div>
+                <div class="col-lg-6 col-xs-12" >
+                    <div class="echart" id="main"></div>
                 </div>
 
 
@@ -105,7 +111,7 @@
     </sction>
 
 
-    <sction class="section" id="s3">
+    <sction class="section s3" >
 
         <div class="container">
             <div class="heading">
@@ -118,32 +124,67 @@
         </div>
 
     </sction>
-    <sction class="section" id="s4"></sction>
-    <sction class="section" id="s5"></sction>
+    <sction class="section s4" ></sction>
+    <sction class="section s5" ></sction>
 </div>
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jquery.fullPage.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/index.js"></script>
+
 <script>
-    $(function(){
-        $("#fullpage").fullpage({
-            sectionsColor:["#0da5d6","#2AB561","#DE8910","#16BA9D","#0DA5D6"],
+    var myChart = echarts.init(document.getElementById('main'));
 
-            menu:'#menu',
-            afterLoad: function(link,index){
-//                    $(".section").eq(index-1).addClass("current");
-                $(".section").removeClass("current");
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        series: [
+            {
+                name:'about MySelf',
+                type:'pie',
+                selectedMode: 'single',
+                radius: [0, '30%'],
 
-                setTimeout(function(){
-                    $(".section").eq(index-1).addClass("current");
-                },100)
+                label: {
+                    normal: {
+                        position: 'inner'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:335, name:'直达', selected:true},
+                    {value:679, name:'营销广告'},
+                    {value:1548, name:'搜索引擎'}
+                ]
             },
-            navigation:true
-        });
+            {
+                name:'about MySkills',
+                type:'pie',
+                radius: ['40%', '55%'],
 
-    });
+                data:[
+                    {value:335, name:'直达'},
+                    {value:310, name:'邮件营销'},
+                    {value:234, name:'联盟广告'},
+                    {value:135, name:'视频广告'},
+                    {value:1048, name:'百度'},
+                    {value:251, name:'谷歌'},
+                    {value:147, name:'必应'},
+                    {value:102, name:'其他'}
+                ]
+            }
+        ]
+    };
+
+    myChart.setOption(option);
 </script>
-
 </body>
 </html>
