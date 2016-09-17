@@ -114,7 +114,9 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
     opacity: 0;
 }
 .s1.current h1{
-    animation: fadeInDown 1s  ease both;
+    -webkit-animation: fadeInDown 1s ease both;
+    -o-animation: fadeInDown 1s ease both;
+    animation: fadeInDown 1s ease both;
 }
 @keyframes fadeInDown {
     from {
@@ -130,6 +132,8 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
     }
 }
 .s1.current p{
+    -webkit-animation: fadeInUp 1s ease both;
+    -o-animation: fadeInUp 1s ease both;
     animation: fadeInUp 1s ease both;
 }
 @keyframes fadeInUp {
@@ -175,6 +179,8 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
 }
 .s2.current .section-heading{
     opacity: 1;
+    -webkit-animation: bounceInDown 1s ease both;
+    -o-animation: bounceInDown 1s ease both;
     animation: bounceInDown 1s ease both;
 }
 @keyframes bounceInDown {
@@ -257,17 +263,24 @@ fieldset[disabled] .hy-navbar-default .btn-link:focus {
 .s2.current .ptext1{
     line-height: 30px;
     /*transition: all 1s;*/
-    animation: rotateIn 1s 1s ease both;
+    -webkit-animation: rotateIn 1s 1s ease both;
+    -o-animation: rotateIn 1s 1s ease both;
+    animation: rotateIn 1s 1s ease both;;
 }
 .s2.current .ptext2{
     line-height: 30px;
+    -webkit-animation: fadeInUp 1s 2s ease both;
+    -o-animation: fadeInUp 1s 2s ease both;
     animation: fadeInUp 1s 2s ease both;
 }
 .s2.current .echart{
     margin: -100px auto 0;
     width: 100%;
     height: 500px;
+    -webkit-animation: flipInY 4s 1s ease both;
+    -o-animation: flipInY 4s 1s ease both;
     animation: flipInY 4s 1s ease both;
+
     opacity: 1;
 }
 
